@@ -65,26 +65,43 @@ const UrlCard = styled.li`
   }
   @media(max-width: 870px){
     div{
-      width: 100%;
-      padding: 2%;
-      padding-left: 4px;
+      width: 80%;
+      flex-wrap: wrap;
+      /* max-width: 54vw; */
+      padding: 3%;
+      gap: 10px;
+      row-gap: 0;
       .url{
-        width: 25vw;
-        min-width: 30%;
-        max-width: 25vw;
+        width: 60%;
+        max-width: 80%;
       }
       .shortUrl{
-        min-width: 30%;
+        min-width: fit-content;
         max-width: 25vw;
+        text-align: center;
       }
     }
 
     button{
       width: 20%;
-      min-width: 60px;
-      max-width: 90px;
+      /* min-width: 60px;
+      max-width: 90px; */
     }
   }
+  /* @media(max-width: 540px){
+    div{
+      flex-wrap: wrap;
+      max-width: 54vw;
+      .url{
+        width: 96vw;
+        max-width: 80%;
+      }
+      .shortUrl{
+        min-width: 50%;
+        max-width: 25vw;
+      }
+    }
+  } */
 `;
 
 export { UrlCard };

@@ -12,6 +12,7 @@ const Topo = styled.div`
 
   .menuButtonClassName {
     display: none;
+    width: fit-content;
     background-color: transparent;
     border: none;
   }
