@@ -32,6 +32,7 @@ const Form = styled.form`
   }
   @media(max-width: 770px){
     flex-direction: column;
+    margin-top: 30px;
     gap: 25px;
   }
 `;
@@ -58,6 +59,7 @@ const ButtonForm = styled.button`
   &:hover{
     cursor: pointer;
   }
+  
 `;
 
 export { Form, ButtonForm };

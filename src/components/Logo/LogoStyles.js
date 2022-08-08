@@ -8,6 +8,12 @@ const LogoImg = styled.img`
   margin: 17px 70px 0;
   box-sizing: border-box;
   background-color: var(--cor-branca);
+
+  @media(max-width: 870px){
+    width: 60vw;
+    height: auto;
+    margin: 30px 40px 0;
+  }
 `;
 
 export { LogoImg };
