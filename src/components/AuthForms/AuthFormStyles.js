@@ -31,6 +31,10 @@ const Form = styled.form`
     line-height: 18px;
     color: var(--cor-cinza);
   }
+
+  @media(max-width: 870px){
+    margin-top: 50px;
+  }
 `;
 
 const ButtonForm = styled.button`
