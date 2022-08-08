@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserContext from '../../contexts/UserContext';
 import { Button, ButtonsContainer, Topo, WelcomeMessage} from './HeaderStyles.js';
+import MenuMobile from './MenuMobile';
 
 function Header({page}) {
   const{ user, setUser } = useContext(UserContext);
@@ -14,29 +15,32 @@ function Header({page}) {
       if (page === 'home') {
         return(
           <Topo>
-            <ButtonsContainer>
-              <Button 
-                color={corVerde} 
-                key="1" 
-                onClick={() => navigate("/home")}
-              >
-                Home
-              </Button>
-              <Button 
-                color={corCinza} 
-                key="2"
-                onClick={() => navigate("/ranking")}
-              >
-                Ranking
-              </Button>
-              <Button 
-                color={corCinza} 
-                key="3"
-                onClick={() => handleLogout()}
-              >
-                Sair
-              </Button>
-            </ButtonsContainer>
+            <div>
+              <MenuMobile />
+              <ButtonsContainer className='buttons'>
+                <Button 
+                  color={corVerde} 
+                  key="1" 
+                  onClick={() => navigate("/home")}
+                >
+                  Home
+                </Button>
+                <Button 
+                  color={corCinza} 
+                  key="2"
+                  onClick={() => navigate("/ranking")}
+                >
+                  Ranking
+                </Button>
+                <Button 
+                  color={corCinza} 
+                  key="3"
+                  onClick={() => handleLogout()}
+                >
+                  Sair
+                </Button>
+              </ButtonsContainer>
+            </div>
             <WelcomeMessage>{`Seja bem-vindo(a), ${user.name}`}</WelcomeMessage>
           </Topo>
         );
@@ -44,7 +48,8 @@ function Header({page}) {
       else if (page === 'ranking') {
         return(
           <Topo>
-            <ButtonsContainer>
+            <MenuMobile />
+            <ButtonsContainer className='buttons'>
               <Button 
                 color={corCinza} 
                 key="1" 
@@ -75,7 +80,8 @@ function Header({page}) {
     if (page === 'signup'){
       return(
         <Topo>
-          <ButtonsContainer>
+          <MenuMobile />
+          <ButtonsContainer className='buttons'>
             <Button 
               color={corCinza} 
               key="1"
@@ -97,7 +103,8 @@ function Header({page}) {
     else{
       return(
         <Topo>
-          <ButtonsContainer>
+          <MenuMobile />
+          <ButtonsContainer className='buttons'>
           <Button 
             color={corVerde} 
             key="1"
