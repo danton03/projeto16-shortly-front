@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const UrlCard = styled.li`
   display: flex;
+  width: 100%;
   align-items: center;
   box-sizing: border-box;
   box-shadow: 0px 4px 24px rgba(120, 177, 89, 0.12);
@@ -60,6 +61,28 @@ const UrlCard = styled.li`
 
     &:hover{
       cursor: pointer;
+    }
+  }
+  @media(max-width: 870px){
+    div{
+      width: 100%;
+      padding: 2%;
+      padding-left: 4px;
+      .url{
+        width: 25vw;
+        min-width: 30%;
+        max-width: 25vw;
+      }
+      .shortUrl{
+        min-width: 30%;
+        max-width: 25vw;
+      }
+    }
+
+    button{
+      width: 20%;
+      min-width: 60px;
+      max-width: 90px;
     }
   }
 `;

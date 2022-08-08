@@ -30,6 +30,10 @@ const Form = styled.form`
     line-height: 18px;
     color: var(--cor-cinza);
   }
+  @media(max-width: 770px){
+    flex-direction: column;
+    gap: 25px;
+  }
 `;
 
 const ButtonForm = styled.button`
