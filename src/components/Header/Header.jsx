@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import UserContext from '../../contexts/UserContext';
 import { Button, ButtonsContainer, Topo, WelcomeMessage} from './HeaderStyles.js';
 
-function Header(page) {
+function Header({page}) {
   const{ user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
   const corCinza = "#9C9C9C";
   const corVerde = "#5D9040";
 
   function renderHeader() {
-    if (user.length) {
+    if (user.name) {
       return(
         <Topo>
           <ButtonsContainer>
@@ -31,7 +31,7 @@ function Header(page) {
             <Button 
               color={corCinza} 
               key="3"
-              onClick={handleLogout()}
+              onClick={() => handleLogout()}
             >
               Sair
             </Button>
@@ -40,30 +40,29 @@ function Header(page) {
         </Topo>
       );
     }
-    else {
-      if (page === 'signup') {
-        return(
-          <Topo>
-            <ButtonsContainer>
-              <Button 
-                color={corCinza} 
-                key="1"
-                onClick={() => navigate("/login")}
-              >
-                Entrar
-              </Button>
-              <Button 
-                color={corVerde} 
-                key="2"
-                onClick={() => navigate("/signup")}
-              >
-                Cadastrar-se
-              </Button>
-            </ButtonsContainer>
-          </Topo>
-        );
-      }
-      
+    if (page === 'signup'){
+      return(
+        <Topo>
+          <ButtonsContainer>
+            <Button 
+              color={corCinza} 
+              key="1"
+              onClick={() => navigate("/login")}
+            >
+              Entrar
+            </Button>
+            <Button 
+              color={corVerde} 
+              key="2"
+              onClick={() => navigate("/signup")}
+            >
+              Cadastrar-se
+            </Button>
+          </ButtonsContainer>
+        </Topo>
+      );
+    }
+    else{
       return(
         <Topo>
           <ButtonsContainer>

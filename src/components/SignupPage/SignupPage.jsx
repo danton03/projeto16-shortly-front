@@ -1,3 +1,4 @@
+import SignupForm from "../AuthForms/SignupForm";
 import { Container } from "../ContainerPage/ContainerPage";
 import { Header } from "../Header/Header";
 import Logo from "../Logo/Logo";
@@ -7,7 +8,7 @@ export default function SignupPage() {
     <Container>
       <Header page="signup" />
       <Logo />
-      
+      <SignupForm />
     </Container>
   );
 }
