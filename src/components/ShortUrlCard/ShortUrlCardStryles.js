@@ -10,9 +10,8 @@ const UrlCard = styled.li`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    box-sizing: border-box;
     width: 890px;
+    max-width: 890px;
     height: 60px;
     background-color: var(--cor-verde-claro);
     border-radius: 12px 0px 0px 12px;
@@ -20,21 +19,25 @@ const UrlCard = styled.li`
     padding-right: 94px;
     font-weight: 400;
     font-size: 14px;
+    box-sizing: border-box;
     color: var(--cor-branca);
 
     span{
-      display: flex;
       font-family: 'Lexend Deca';
       font-style: normal;
       font-weight: 400;
-      max-width: 30%;
-      //white-space: nowrap;
       overflow: hidden;
+      white-space: nowrap;
       text-overflow: ellipsis;
       font-size: 14px;
       line-height: 18px;
       box-sizing: border-box;
       color: var(--cor-branca);
+    }
+
+    .url{
+      width: 28%;
+      max-width: 210px;
     }
 
     &:hover{

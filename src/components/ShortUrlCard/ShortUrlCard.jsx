@@ -57,8 +57,8 @@ export default function ShortUrlCard({urlData, setUserData}) {
   return (
     <UrlCard urlData={urlData} >
       <div onClick={() => handleVisit()} >
-        <span>{url}</span>
-        <span>{shortUrl}</span>
+        <span className="url" title={url} >{url}</span>
+        <span title={shortUrl} >{shortUrl}</span>
         <span>{visitCount}</span>
       </div>
 

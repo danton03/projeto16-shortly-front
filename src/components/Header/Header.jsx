@@ -11,34 +11,66 @@ function Header({page}) {
 
   function renderHeader() {
     if (user.name) {
-      return(
-        <Topo>
-          <ButtonsContainer>
-            <Button 
-              color={corCinza} 
-              key="1" 
-              onClick={() => navigate("/home")}
-            >
-              Home
-            </Button>
-            <Button 
-              color={corCinza} 
-              key="2"
-              onClick={() => navigate("/")}
-            >
-              Ranking
-            </Button>
-            <Button 
-              color={corCinza} 
-              key="3"
-              onClick={() => handleLogout()}
-            >
-              Sair
-            </Button>
-          </ButtonsContainer>
-          <WelcomeMessage>{`Seja bem-vindo(a), ${user.name}`}</WelcomeMessage>
-        </Topo>
-      );
+      if (page === 'home') {
+        return(
+          <Topo>
+            <ButtonsContainer>
+              <Button 
+                color={corVerde} 
+                key="1" 
+                onClick={() => navigate("/home")}
+              >
+                Home
+              </Button>
+              <Button 
+                color={corCinza} 
+                key="2"
+                onClick={() => navigate("/ranking")}
+              >
+                Ranking
+              </Button>
+              <Button 
+                color={corCinza} 
+                key="3"
+                onClick={() => handleLogout()}
+              >
+                Sair
+              </Button>
+            </ButtonsContainer>
+            <WelcomeMessage>{`Seja bem-vindo(a), ${user.name}`}</WelcomeMessage>
+          </Topo>
+        );
+      }
+      else if (page === 'ranking') {
+        return(
+          <Topo>
+            <ButtonsContainer>
+              <Button 
+                color={corCinza} 
+                key="1" 
+                onClick={() => navigate("/home")}
+              >
+                Home
+              </Button>
+              <Button 
+                color={corVerde} 
+                key="2"
+                onClick={() => navigate("/ranking")}
+              >
+                Ranking
+              </Button>
+              <Button 
+                color={corCinza} 
+                key="3"
+                onClick={() => handleLogout()}
+              >
+                Sair
+              </Button>
+            </ButtonsContainer>
+            <WelcomeMessage>{`Seja bem-vindo(a), ${user.name}`}</WelcomeMessage>
+          </Topo>
+        );
+      }
     }
     if (page === 'signup'){
       return(

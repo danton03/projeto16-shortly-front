@@ -56,7 +56,7 @@ export default function RankingPage() {
       <RankingPanel>
         {ranking.length ? renderRanking() : ''}
       </RankingPanel>
-      {user.length ? 
+      {user.token ? 
         ""
         : 
         <Title>

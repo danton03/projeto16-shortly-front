@@ -29,8 +29,9 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={ <RankingPage /> } />
+          <Route path="/" element={ !user.token ? <RankingPage /> : <Navigate to="/home" replace /> } />
           <Route path="/home" element={ user.token ? <HomePage /> : <Navigate to="/" replace /> } />
+          <Route path="/ranking" element={ <RankingPage /> } />
           <Route path="/login" element={ !user.token ? <LoginPage /> : <Navigate to="/home" replace/> } />
           <Route path="/signup" element={ !user.token ? <SignupPage /> : <Navigate to="/home" replace/> } />
         </Routes>

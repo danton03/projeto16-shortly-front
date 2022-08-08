@@ -28,13 +28,11 @@ const RankingPanel = styled.ol`
   width: 100%;
   height: auto;
   max-width: 1017px;
-  min-height: 241px;
   max-height: 482px;
   gap: 10px;
   margin-top: 57px;
   padding: 19px 40px;
   box-sizing: border-box;
-  overflow-y: scroll;
 
   border: 1px solid rgba(120, 177, 89, 0.25);
   box-shadow: 0px 4px 24px rgba(120, 177, 89, 0.12);
@@ -47,28 +45,6 @@ const RankingPanel = styled.ol`
     font-size: 22px;
     line-height: 28px;
     color: var(--cor-preta);
-  }
-
-  /* width */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: var(--cor-verde-scroll);
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--cor-verde-claro);
   }
 `;
 

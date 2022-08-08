@@ -6,10 +6,10 @@ const ShortUrlsPanel = styled.ul`
   width: 100%;
   height: auto;
   max-width: 1020px;
-  max-height: 292px;
+  max-height: 268px;
   gap: 42px;
   margin-top: 57px;
-  padding: 0 19px 20px 0;
+  padding: 0 20px 2px 0;
   box-sizing: border-box;
   overflow-y: scroll;
 
