@@ -72,7 +72,7 @@ const UrlCard = styled.li`
       gap: 10px;
       row-gap: 0;
       .url{
-        width: 60%;
+        width: 97%;
         max-width: 80%;
       }
       .shortUrl{
@@ -88,20 +88,6 @@ const UrlCard = styled.li`
       max-width: 90px; */
     }
   }
-  /* @media(max-width: 540px){
-    div{
-      flex-wrap: wrap;
-      max-width: 54vw;
-      .url{
-        width: 96vw;
-        max-width: 80%;
-      }
-      .shortUrl{
-        min-width: 50%;
-        max-width: 25vw;
-      }
-    }
-  } */
 `;
 
 export { UrlCard };

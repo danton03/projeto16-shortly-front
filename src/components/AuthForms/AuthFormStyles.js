@@ -56,6 +56,10 @@ const ButtonForm = styled.button`
   &:hover{
     cursor: pointer;
   }
+
+  @media(max-width: 870px){
+    margin-top: 30px;
+  }
 `;
 
 export { Form, ButtonForm };

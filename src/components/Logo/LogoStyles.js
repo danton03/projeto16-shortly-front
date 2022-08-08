@@ -12,7 +12,7 @@ const LogoImg = styled.img`
   @media(max-width: 870px){
     width: 60vw;
     height: auto;
-    margin: 30px 40px 0;
+    margin: 56px 40px 0;
   }
 `;
 
