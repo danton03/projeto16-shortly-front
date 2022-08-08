@@ -40,20 +40,22 @@ export default function MenuMobile() {
     }
 
     else{
-      <>
-        <MenuItem 
-            className={"menuItem"} 
-            onClick={() => navigate("/login")}
-          >
-            Entrar
-          </MenuItem>
+      return(
+        <>
           <MenuItem 
-            className={"menuItem"} 
-            onClick={() => navigate("/signup")}
-          >
-            Cadastrar-se
-          </MenuItem>
-      </>
+              className={"menuItem"} 
+              onClick={() => navigate("/login")}
+            >
+              Entrar
+            </MenuItem>
+            <MenuItem 
+              className={"menuItem"} 
+              onClick={() => navigate("/signup")}
+            >
+              Cadastrar-se
+            </MenuItem>
+        </>
+      );
     }
   }
 
