@@ -13,14 +13,6 @@ const ShortUrlsPanel = styled.ul`
   box-sizing: border-box;
   overflow-y: scroll;
 
-  p{
-    font-family: 'Lexend Deca';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    color: var(--cor-cinza);
-  }
-
   /* width */
   ::-webkit-scrollbar {
     width: 10px;
@@ -44,4 +36,18 @@ const ShortUrlsPanel = styled.ul`
   }
 `;
 
-export { ShortUrlsPanel };
+const Message = styled.p`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  font-family: 'Lexend Deca';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--cor-cinza);
+`;
+
+export { ShortUrlsPanel, Message };

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Topo = styled.div`
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: ${(props) => props.reverse ? "row-reverse" : "row"};
   align-items: center;
   justify-content: space-between;
   width: 100%;

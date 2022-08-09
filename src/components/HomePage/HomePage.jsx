@@ -9,7 +9,7 @@ import { Header } from "../Header/Header";
 import Logo from "../Logo/Logo";
 import ShortenUrl from "../ShortenUrl/ShortenUrl";
 import ShortUrlCard from "../ShortUrlCard/ShortUrlCard";
-import { ShortUrlsPanel } from "./HomePageStyles";
+import { Message, ShortUrlsPanel } from "./HomePageStyles";
 
 export default function HomePage() {
   const { user, setUser } = useContext(UserContext);
@@ -55,6 +55,7 @@ export default function HomePage() {
 
   function renderShortUrls() {
     const { shortenedUrls } = userData;
+    console.log(shortenedUrls);
     return(
       shortenedUrls.map((urlData, index) => {
         return(
@@ -73,13 +74,13 @@ export default function HomePage() {
       <Header page="home" />
       <Logo />
       <ShortenUrl setUserData={setUserData} />
-      <ShortUrlsPanel>
-        {
-          userData.shortenedUrls ?
-          renderShortUrls() 
-          : <p>Você não tem links encurtados ainda</p>
-        }
-      </ShortUrlsPanel>
+      {
+        userData.shortenedUrls ? 
+        <ShortUrlsPanel>
+          { renderShortUrls() } 
+        </ShortUrlsPanel>
+        : <Message>Você não encurtou links ainda. Comece agora!</Message>
+      }
     </Container>
   );
 }
