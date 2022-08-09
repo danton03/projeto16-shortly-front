@@ -13,6 +13,14 @@ const ShortUrlsPanel = styled.ul`
   box-sizing: border-box;
   overflow-y: scroll;
 
+  p{
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--cor-cinza);
+  }
+
   /* width */
   ::-webkit-scrollbar {
     width: 10px;

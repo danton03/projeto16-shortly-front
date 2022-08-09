@@ -77,7 +77,7 @@ export default function HomePage() {
         {
           userData.shortenedUrls ?
           renderShortUrls() 
-          : ''
+          : <p>Você não tem links encurtados ainda</p>
         }
       </ShortUrlsPanel>
     </Container>

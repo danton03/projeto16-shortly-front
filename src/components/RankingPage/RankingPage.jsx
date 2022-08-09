@@ -24,7 +24,7 @@ export default function RankingPage() {
         promise,
         {
           pending: 'Carregando...',
-          success: 'Bem-vindo ao Ranking!',
+          success: 'Ranking carregado',
           error: 'Erro ao tentar carregar o ranking. Tente novamente'
         }
       );
