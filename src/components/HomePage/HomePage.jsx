@@ -30,7 +30,7 @@ export default function HomePage() {
       promise,
       {
         pending: 'Carregando Links...',
-        success: 'Links carregados!',
+        success: 'Dados do usuário carregados com sucesso!',
         error: {
           render({ data }) {
             const code = data.response.status;
@@ -69,6 +69,24 @@ export default function HomePage() {
     );
   }
 
+  function renderPanel() {
+    const { shortenedUrls } = userData;
+    if (!shortenedUrls.length) {
+      return(
+        <Message>
+          Você não encurtou links ainda. Comece agora!
+        </Message>
+      );
+    }
+    else{
+      return(
+        <ShortUrlsPanel>
+            { renderShortUrls() } 
+        </ShortUrlsPanel>
+      );
+    }
+  }
+
   return (
     <Container>
       <Header page="home" />
@@ -76,10 +94,8 @@ export default function HomePage() {
       <ShortenUrl setUserData={setUserData} />
       {
         userData.shortenedUrls ? 
-        <ShortUrlsPanel>
-          { renderShortUrls() } 
-        </ShortUrlsPanel>
-        : <Message>Você não encurtou links ainda. Comece agora!</Message>
+        renderPanel()
+        : ''
       }
     </Container>
   );
