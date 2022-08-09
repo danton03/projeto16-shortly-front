@@ -14,7 +14,7 @@ function Header({page}) {
     if (user.name) {
       if (page === 'home') {
         return(
-          <Topo reverse={true}>
+          <Topo>
             <div>
               <MenuMobile />
               <ButtonsContainer className='buttons'>
@@ -47,7 +47,7 @@ function Header({page}) {
       }
       else if (page === 'ranking') {
         return(
-          <Topo reverse={true}>
+          <Topo>
              <div>
               <MenuMobile />
               <ButtonsContainer className='buttons'>
@@ -82,46 +82,50 @@ function Header({page}) {
     if (page === 'signup'){
       return(
         <Topo>
-          <MenuMobile />
-          <ButtonsContainer className='buttons'>
-            <Button 
-              color={corCinza} 
-              key="1"
-              onClick={() => navigate("/login")}
-            >
-              Entrar
-            </Button>
-            <Button 
-              color={corVerde} 
-              key="2"
-              onClick={() => navigate("/signup")}
-            >
-              Cadastrar-se
-            </Button>
-          </ButtonsContainer>
+          <div>
+            <MenuMobile />
+            <ButtonsContainer className='buttons'>
+              <Button 
+                color={corCinza} 
+                key="1"
+                onClick={() => navigate("/login")}
+              >
+                Entrar
+              </Button>
+              <Button 
+                color={corVerde} 
+                key="2"
+                onClick={() => navigate("/signup")}
+              >
+                Cadastrar-se
+              </Button>
+            </ButtonsContainer>
+          </div>
         </Topo>
       );
     }
     else{
       return(
         <Topo>
-          <MenuMobile />
-          <ButtonsContainer className='buttons'>
-          <Button 
-            color={corVerde} 
-            key="1"
-            onClick={() => navigate("/login")}
-          >
-            Entrar
-          </Button>
-          <Button 
-            color={corCinza} 
-            key="2"
-            onClick={() => navigate("/signup")}
-          >
-            Cadastrar-se
-          </Button>
-          </ButtonsContainer>
+          <div>
+            <MenuMobile />
+            <ButtonsContainer className='buttons'>
+            <Button 
+              color={corVerde} 
+              key="1"
+              onClick={() => navigate("/login")}
+            >
+              Entrar
+            </Button>
+            <Button 
+              color={corCinza} 
+              key="2"
+              onClick={() => navigate("/signup")}
+            >
+              Cadastrar-se
+            </Button>
+            </ButtonsContainer>
+          </div>
         </Topo>
       );
     }

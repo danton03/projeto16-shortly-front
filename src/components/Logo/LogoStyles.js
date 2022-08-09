@@ -4,6 +4,7 @@ const LogoImg = styled.img`
   align-items: center;
   justify-content: center;
   width: 314px;
+  max-width: 314px;
   height: 102px;
   margin: 17px 70px 0;
   box-sizing: border-box;

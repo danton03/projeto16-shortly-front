@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const Title = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: fit-content;
+  justify-content: center;
+  width: 100%;
   height: auto;
   gap: 10px;
   margin-top: 70px;
@@ -14,6 +14,7 @@ const Title = styled.div`
   font-weight: 700;
   font-size: 36px;
   line-height: 45px;
+  text-align: center;
   color: var(--cor-preta);
 
   img{
@@ -28,7 +29,6 @@ const RankingPanel = styled.ol`
   width: 100%;
   height: auto;
   max-width: 1017px;
-  max-height: 482px;
   gap: 10px;
   margin-top: 57px;
   padding: 19px 40px;
