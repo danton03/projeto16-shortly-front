@@ -54,8 +54,8 @@ export default function SignupForm() {
         error: {
           render({ data }) {
             const code = data.response.status;
-            if (code === 401) {
-              return 'Usuário/senha inválida';
+            if (code === 409) {
+              return 'Usuário já cadastrado';
             }
             if (code === 422) {
               return 'Preencha todos os campos corretamente';

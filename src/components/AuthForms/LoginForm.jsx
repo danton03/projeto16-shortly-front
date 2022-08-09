@@ -35,7 +35,6 @@ export default function LoginForm() {
       promise,
       {
         pending: 'Carregando...',
-        success: 'Login realizado com sucesso!',
         error: {
           render({ data }) {
             const code = data.response.status;
