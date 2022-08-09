@@ -25,6 +25,14 @@ export default function SignupForm() {
       toast.error("A senha e a confirmação de senha precisam ser iguais!");
       return;
     }
+    if(password.length > 30){
+      toast.error("A senha deve ter no máximo 30 caracteres!");
+      return;
+    }
+    if(name.length > 30){
+      toast.error("O nome deve ter no máximo 30 caracteres!");
+      return;
+    }
     const userData = {
       name,
       email,
@@ -91,7 +99,7 @@ export default function SignupForm() {
         required
         onChange={e => setConfirmPassword(e.target.value)}
       />
-      <ButtonForm type="submit">Entrar</ButtonForm>
+      <ButtonForm type="submit">Cadastrar</ButtonForm>
     </Form>
   );
 }

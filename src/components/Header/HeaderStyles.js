@@ -18,6 +18,8 @@ const Topo = styled.div`
   }
 
   .my-menu {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
     color: var(--cor-cinza);
   }
 

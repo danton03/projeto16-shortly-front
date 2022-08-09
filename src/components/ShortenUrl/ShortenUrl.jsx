@@ -54,7 +54,7 @@ export default function ShortenUrl({setUserData}) {
         required 
         onChange={e => setUrl(e.target.value)}
       />
-      <ButtonForm type="submit">Entrar</ButtonForm>
+      <ButtonForm type="submit">Encurtar</ButtonForm>
     </Form>
   );
 }

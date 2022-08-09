@@ -34,6 +34,10 @@ const ShortUrlsPanel = styled.ul`
   ::-webkit-scrollbar-thumb:hover {
     background: var(--cor-verde-claro);
   }
+
+  @media(max-width: 615px){
+    gap: 16px;
+  }
 `;
 
 const Message = styled.p`
