@@ -1,5 +1,5 @@
 function getApiUrl(route) {
-  const url = `https://projeto16-shortly-danton.herokuapp.com/${route}`;
+  const url = `https://shortly-backend-67wc.onrender.com/${route}`;
   return url;
 }
 
