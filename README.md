@@ -27,6 +27,8 @@ Shortly é um sistema de encurtador de URLs onde é possível armazenar e encurt
 Quer ver o projeto funcionando?
 <a href= "http://projeto16-shortly-front-six.vercel.app/" target="_blank">clique aqui</a>.
 
+Nota: Devido às restrições do plano gratuito utilizado no deploy back-end, a primeira requisição do site demora até 30 segundos para ser resolvida se este passar por 15 min de inatividade.
+
 </br>
 
 ## Funcionalidades
